@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbarSize="12dp"
     tools:context=".MainActivity">
 
     <Button
@@ -158,4 +159,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Substract"
         app:layout_constraintTop_toBottomOf="@+id/Equals" />
+
+    <EditText
+        android:id="@+id/IntroducirNumeros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="172dp"
+        android:layout_marginBottom="134dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Número:"
+        app:layout_constraintBottom_toTopOf="@+id/Add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTexto" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="193dp"
+        android:layout_marginBottom="96dp"
+        android:text="Resultado"
+        app:layout_constraintBottom_toTopOf="@+id/Add"
+        app:layout_constraintEnd_toStartOf="@+id/Equals"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IntroducirNumeros" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
