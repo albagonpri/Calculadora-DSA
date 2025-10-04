@@ -2,6 +2,7 @@ package edu.upc.dsa.calculadora_dsa;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,10 +11,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-int n1;
-int n2;
-int op;
-int res;
+private double n1,n2,res;
+private int op;
+private boolean isDegrees=true;
+private boolean num=false;
+private TextView tvResultado;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +30,8 @@ int res;
     }
     public void onEquals(View v)
     {
+        tvResultado=findViewById(R.id.tvResultado);
+        String texto=tvResultado.getText().toString();
         if (op == 1) {
             res=n1+n2;
         } else if (op==2) {
@@ -44,6 +49,8 @@ int res;
 n1=0;
 n2=0;
 res=0;
+        tvResultado=findViewById(R.id.tvResultado);
+        tvResultado.setText("");
     }
 
     public void onAdd(View v){
