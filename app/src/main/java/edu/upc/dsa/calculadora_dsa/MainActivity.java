@@ -65,7 +65,7 @@ private TextView tvResultado;
         }
 
         tvResultado.setText(String.format(Locale.getDefault(), "%.2f", res));
-        input.setText(""); // limpiar el campo
+        input.setText(""); 
     }
 
     public void onClear(View v)
